@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .btn-active-from-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: ease-in-out forwards;
+
+    &:hover .btn {
+      display: flex;
+    }
+
+    &:hover .description {
+      display: none;
+    }
+  }
+}
