@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  @apply bg-gradient-to-t from-black to-[#121212];
+}
 @layer utilities {
   .btn-active-from-hover {
     display: flex;
@@ -18,4 +20,20 @@
       display: none;
     }
   }
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
