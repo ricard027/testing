@@ -3,6 +3,7 @@ import { api } from './services/api'
 import { Link } from 'react-router-dom'
 
 import { getCorrespondingImage } from './utils/getCorrespondingImage'
+import Loading from './loading'
 
 function App() {
   const [category, setCategory] = useState({})
@@ -11,6 +12,7 @@ function App() {
   const getData = async () => {
     try {
       const { data: categories } = await api.get('/')
+
       setCategory(categories)
     } catch (error) {
       console.log(error, 'error')
@@ -23,9 +25,9 @@ function App() {
     }
     getData()
   }, [category, isEmpty])
-
   return (
-    <main className='container m-auto  bg-[#000]'>
+    <main className='container m-auto min-h-screen bg-[#000]'>
+      {Object.keys(category) < 1 && <Loading />}
       <div className='md:w-1/3 sm:w-full  m-auto h-[400px] relative '>
         <img
           src='
@@ -43,10 +45,10 @@ function App() {
                 key={i}
                 className=' relative btn-active-from-hover flex flex-col items-center  sm:h-[50vh] h-[50vh] md:h-[60vh]  justify-end rounded-xl'
               >
-                <div className='bg-purple-500  w-full h-full  rounded-xl '>
+                <div className={` w-full h-full  rounded-xl `}>
                   <img
                     src={getCorrespondingImage(category)}
-                    className='h-full object-cover w-full  rounded-xl'
+                    className='h-full object-cover w-full  rounded-xl '
                     alt={`image of ${category}`}
                   />
                 </div>
