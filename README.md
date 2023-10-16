@@ -1,28 +1,21 @@
-# React + TypeScript + Vite
+# Star Wars Data Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Star Wars GIF](https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif)
 
-Currently, two official plugins are available:
+A dynamic table displaying information from the Star Wars universe, built using Vite, Tailwind CSS, TypeScript, React Icons, and React Router Dom with data fetched from the Star Wars API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetches and displays data from the Star Wars API
+- Responsive table design using Tailwind CSS
+- Utilizes React Router for easy navigation
+- Icons provided by React Icons library
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- [Vite](https://vitejs.dev/) - A fast build tool that significantly improves the frontend development experience.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [React Icons](https://react-icons.github.io/react-icons/) - Popular icons for React applications.
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start) - Declarative routing for React.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# testing
