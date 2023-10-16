@@ -69,10 +69,10 @@ const Human: FunctionComponent<SpeciesComponentProps> = ({
         {props.MassIcon} {mass}
       </div>
       <div className=' text-white px-4 py-2 rounded-lg flex items-center gap-2 bg-gradient-to-b from-black to-[#121212] border border-[#000]'>
-        VEHICLES: {props.VehiclesIcon} {vehicles?.length || ''}
+        {props.VehiclesIcon} {vehicles}
       </div>
       <div className=' text-white px-4 py-2 rounded-lg flex items-center gap-2 bg-gradient-to-b from-black to-[#121212] border border-[#000]'>
-        STARSHIPS:{props.StarShipIcon} {starships?.length || ''}
+        {props.StarShipIcon} {starships}
       </div>
     </div>
   )

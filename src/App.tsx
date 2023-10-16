@@ -27,7 +27,7 @@ function App() {
   }, [category, isEmpty])
   return (
     <main className='container m-auto min-h-screen bg-[#000]'>
-      {Object.keys(category) < 1 && <Loading />}
+      {!Object.keys(category).length && <Loading />}
       <div className='md:w-1/3 sm:w-full  m-auto h-[400px] relative '>
         <img
           src='

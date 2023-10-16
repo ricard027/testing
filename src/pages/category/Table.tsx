@@ -5,7 +5,6 @@ import { api } from '../../services/api'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BsArrowLeft } from 'react-icons/bs'
-
 import Loading from '../../loading'
 
 const Table = () => {
@@ -26,6 +25,11 @@ const Table = () => {
     } catch (error) {
       console.log(error, 'error')
     }
+  }
+
+  const getDetails = async (isDetails, value) => {
+    const urlId = value.match(/\d+/)[0]
+    isDetails && navigate(`/${category}/${urlId}`)
   }
 
   useEffect(() => {

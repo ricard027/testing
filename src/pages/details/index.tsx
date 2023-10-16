@@ -122,7 +122,7 @@ const DetailsPage = () => {
                 MassIcon={<FaWeightHanging size={20} />}
                 skin={details.skin_color}
                 SkinIcon={<AiOutlineSkin size={20} />}
-                starships={details?.starships}
+                starships={details?.starships.length}
                 StarShipIcon={<FaSpaceShuttle size={20} />}
                 vehicles={details?.vehicles?.length}
                 VehiclesIcon={<GiCarKey size={20} />}

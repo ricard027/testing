@@ -28,7 +28,7 @@ const Film: FunctionComponent<FilmProps> = ({
   ...props
 }) => {
   return (
-    <div className='flex  gap-4 items-center flex-wrap '>
+    <div className='flex  gap-4 items-center flex-wrap'>
       <div className=' text-white px-4 py-2 rounded-lg flex items-center gap-2 bg-gradient-to-b from-black to-[#121212] border border-[#000]'>
         {props.DirectorIcon}
         {director}
