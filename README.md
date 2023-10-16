@@ -1,8 +1,13 @@
 # Star Wars Data Table
 
-![Star Wars GIF]([https://media.giphy.com/media/xT0BKiwgIPGShJNi0g/giphy.gif](https://media1.giphy.com/media/3owzWjFuGTjLMD2UuY/giphy.gif)])
+![Star Wars GIF](https://media.tenor.com/VGDh7s_3OzEAAAAd/battle-stance-ahsoka-tano.gif)
+
+
+
 
 A dynamic table displaying information from the Star Wars universe, built using Vite, Tailwind CSS, TypeScript, React Icons, and React Router Dom with data fetched from the Star Wars API.
+
+![image](https://github.com/ricard027/testing/assets/87427651/c20b7aeb-e322-4f35-934a-5559226e37f0)
 
 ## Features
 
