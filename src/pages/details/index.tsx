@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useEffect, useState } from 'react'
 import { api } from '../../services/api'
 import { useLocation, useNavigate } from 'react-router'
@@ -34,7 +35,7 @@ import {
 } from 'react-icons/gi'
 import { BsArrowLeft } from 'react-icons/bs'
 import { TiWeatherCloudy } from 'react-icons/ti'
-import { BiCalendar, BiDollar, BiRuler } from 'react-icons/bi'
+import { BiCalendar, BiDollar } from 'react-icons/bi'
 import { RiTeamFill, RiUserFill } from 'react-icons/ri'
 
 import { PiGlobeThin as Globe, PiCakeLight } from 'react-icons/pi'

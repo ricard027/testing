@@ -1,10 +1,9 @@
-import axios from 'axios'
-
 import { api } from '../../services/api'
 
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BsArrowLeft } from 'react-icons/bs'
+
 import Loading from '../../loading'
 
 const Table = () => {
@@ -12,7 +11,8 @@ const Table = () => {
   const [categori, setCategories] = useState([])
 
   const isURL = new RegExp('^(https://).*$', 'i')
-  const navigate = useNavigate('/')
+
+  const navigate = useNavigate()
 
   const isEmpty = !!categori.length
 
@@ -27,8 +27,8 @@ const Table = () => {
     }
   }
 
-  const getDetails = async (isDetails, value) => {
-    const urlId = value.match(/\d+/)[0]
+  const getDetails = async (isDetails: any, value: any) => {
+    const urlId = value?.match(/\d+/)[0]
     isDetails && navigate(`/${category}/${urlId}`)
   }
 
@@ -81,9 +81,9 @@ const Table = () => {
           </thead>
           <tbody className='divide-y divide-gray-200'>
             {categori &&
-              categori.map((object) => {
+              categori.map((object, index) => {
                 return (
-                  <tr className=''>
+                  <tr key={index}>
                     {Object.keys(object)
                       .filter(
                         (item) =>
@@ -110,7 +110,8 @@ const Table = () => {
                                 getDetails(checkValuesTable, object[c])
                               }
                             >
-                              {Array.isArray(object[c]) && object[c].length}
+                              {Array.isArray(object[c]) &&
+                                (object[c] as any).length}
                               {!Array.isArray(object[c]) &&
                                 !checkValuesTable &&
                                 c !== 'homeworld' &&

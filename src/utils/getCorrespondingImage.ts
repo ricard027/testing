@@ -121,6 +121,7 @@ export const getCorrespondingImage = (category: string): string | undefined => {
       'https://i.pinimg.com/564x/5a/36/58/5a36589c86675837dbea41cf12821cfc.jpg',
     Executor:
       'https://i.pinimg.com/564x/43/9e/50/439e504778d1a0bd842114fb44a32db8.jpg',
+    //@ts-ignore
     'CR90 corvette':
       'https://i.pinimg.com/564x/20/dd/b4/20ddb4a46201419d4931e2733a04e94d.jpg',
     'Rebel transport':
