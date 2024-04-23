@@ -25,6 +25,7 @@ function App() {
     }
     getData()
   }, [category, isEmpty])
+
   return (
     <main className='container m-auto min-h-screen bg-[#000]'>
       {!Object.keys(category).length && <Loading />}
